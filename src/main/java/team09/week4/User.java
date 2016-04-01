@@ -12,9 +12,9 @@ public class User {
 		this.usedRate = usedRate;
 		this.lines = lines;
 
-		if ((rank.compareTo("Gold") == 0)) {
+		if (rank.compareTo("Gold") == 0) {
 			this.rank = new Gold();
-		} else if ((rank.compareTo("Silver") == 0)) {
+		} else if (rank.compareTo("Silver") == 0) {
 			this.rank = new Silver();
 		}
 	}

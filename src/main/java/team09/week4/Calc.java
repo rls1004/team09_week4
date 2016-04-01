@@ -2,16 +2,16 @@ package team09.week4;
 
 public class Calc {
 	//private variables
-	private User _user;
+	private User user;
 	
 	//constructor
 	public Calc(User user){
-		this._user = user;
+		this.user = user;
 	}
 	
 	//public methods
 	float calcCharge(){
-		this._user.getRank().setLine(this._user.getLine());
-		return this._user.getRank().calc(this._user.getUsedRate());
+		this.user.getRank().setLine(this.user.getLine());
+		return this.user.getRank().calc(this.user.getUsedRate());
 	}
 }
