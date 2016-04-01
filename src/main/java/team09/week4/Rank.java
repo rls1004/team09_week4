@@ -1,28 +1,28 @@
 package team09.week4;
 
 public class Rank {
-	//protected variable
-	protected int _default;
-	protected float _exceedRate;
-	protected int _lines;
-	protected float _defaultFee;
+	//protected variables
+	protected int defaultTime;
+	protected float exceedRate;
+	protected int lines;
+	protected float defaultFee;
 	
 	//constructor
 	public Rank(){
-		this._lines = 1;
+		this.lines = 1;
 	}
 	
 	//public method
-	public float Calc(float used){
-		return this._defaultFee + (this._lines - 1) * 21.50f + this.exceedFee(used);		
+	public float calc(float used){
+		return this.defaultFee + (this.lines - 1) * 21.50f + this.exceedFee(used);		
 	}
 	
 	public void setLine(int line){
-		this._lines = line;
+		this.lines = line;
 	}
 
 	public float exceedFee(float used){
-		float exceedUse = this._default - used;
+		float exceedUse = this.defaultTime - used;
 		
 		if(exceedUse > 0)
 			return 0;
@@ -30,7 +30,7 @@ public class Rank {
 			exceedUse *= -1.f;
 		}
 		
-		return exceedUse * this._exceedRate;
+		return exceedUse * this.exceedRate;
 	}
 
 }

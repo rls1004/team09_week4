@@ -6,9 +6,9 @@ public class Silver extends Rank {
 	//constructor
 	public Silver(){
 		super();
-		this._default = 500;
-		this._exceedRate = 0.54f;
-		this._defaultFee = 29.95f;
+		this.defaultTime = 500;
+		this.exceedRate = 0.54f;
+		this.defaultFee = 29.95f;
 	}
 	
 	//public methods
