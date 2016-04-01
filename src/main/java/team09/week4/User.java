@@ -45,6 +45,4 @@ public class User {
 	public Rank getRank() {
 		return rank;
 	}
-	
-	
 }
