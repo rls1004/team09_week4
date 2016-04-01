@@ -1,48 +1,33 @@
 package team09.week4;
 
 public class User {
-	private String name;
-	private String number;
-	private float dataRate;
-	private long useDate;
-	private int guid;
+	private float usedRate;
+	private int lines;
 	private Rank rank;
-	
-	public User()
-	{
+
+	public User() {
 	}
-	public User(String name, String number,float dataRate, long useDate,int guid, Rank rank )
-	{
-		this.name=name;
-		this.number=number;
-		this.dataRate=dataRate;
-		this.useDate=useDate;
-		this.guid=guid;
-		this.rank=rank;
-		
-		
+
+	public User(float usedRate, int lines, String rank) {
+		this.usedRate = usedRate;
+		this.lines = lines;
+
+		if (rank.compareTo("Gold") == 0) {
+			this.rank = new Gold();
+		} else if (rank.compareTo("Silver") == 0) {
+			this.rank = new Silver();
+		}
 	}
-	public String getName() {
-		return name;
+
+	public float getUsedRate() {
+		return this.usedRate;
 	}
-	
-	public String getNumber() {
-		return number;
+
+	public int getLine() {
+		return this.lines;
 	}
-	
-	public float getDataRate() {
-		return dataRate;
-	}
-	
-	public long getUseDate() {
-		return useDate;
-	}
-	
-	public int getGuid() {
-		return guid;
-	}
-	
+
 	public Rank getRank() {
-		return rank;
+		return this.rank;
 	}
 }
