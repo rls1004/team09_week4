@@ -14,10 +14,7 @@ public class Rank {
 	
 	//public method
 	public float Calc(float used){
-		float fees = 0;
-		fees = this._defaultFee + (this._lines - 1) * 21.50f + this.exceedFee(used);
-		
-		return fees;	
+		return this._defaultFee + (this._lines - 1) * 21.50f + this.exceedFee(used);		
 	}
 	
 	public void setLine(int line){
@@ -25,17 +22,15 @@ public class Rank {
 	}
 
 	public float exceedFee(float used){
-		float eFee = 0.f;
 		float exceedUse = this._default - used;
 		
 		if(exceedUse > 0)
 			return 0;
 		else{
 			exceedUse *= -1.f;
-			eFee = exceedUse * this._exceedRate;
 		}
 		
-		return eFee;
+		return exceedUse * this._exceedRate;
 	}
 
 }
