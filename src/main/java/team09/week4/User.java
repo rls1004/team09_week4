@@ -2,7 +2,7 @@ package team09.week4;
 
 @SuppressWarnings("serial")
 class NotExistPlanException extends Exception{
-	private String msg = null;
+	private final String msg;
 	
 	public NotExistPlanException(String msg){
 		this.msg = msg;
@@ -18,6 +18,7 @@ public class User {
 	private Rank rank;
 
 	public User() {
+		//default class
 	}
 
 	public User(float usedRate, int lines, String rank) throws NotExistPlanException {
