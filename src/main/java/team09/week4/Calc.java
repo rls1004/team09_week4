@@ -5,12 +5,15 @@ public class Calc {
 	private User user;
 	
 	//constructor
-	public Calc(User user){
-		this.user = user;
+	public Calc(){
 	}
 	
 	//public methods
-	float calcCharge(){
+	public void setUser(User u){
+		this.user = u;
+	}
+	
+	public float calcCharge(){
 		this.user.getRank().setLine(this.user.getLine());
 		return this.user.getRank().calc(this.user.getUsedRate());
 	}
