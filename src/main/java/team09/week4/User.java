@@ -20,9 +20,11 @@ public class User {
 	public User() {
 	}
 
-	public User(float usedRate, int lines, String rank) throws Exception {
+	public User(float usedRate, int lines, String rank) throws NotExistPlanException {
 		this.usedRate = usedRate;
 		this.lines = lines;
+		
+		if(this.lines < 1) this.lines = 1;
 
 		if (rank.compareTo("Gold") == 0) {
 			this.rank = new Gold();

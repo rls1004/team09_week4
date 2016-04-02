@@ -34,9 +34,9 @@ public class Output {
 		
 		this.calculator.setUser(this.user);
 		System.out.println("이번 달의 사용 결과는 아래와 같습니다.");
-		System.out.println("총 사용량 : " + used);
-		System.out.println("사용 회선 수 : " + line);
-		System.out.println("사용중인 플랜 : " + plan);
+		System.out.println("총 사용량 : " + user.getUsedRate());
+		System.out.println("사용 회선 수 : " + user.getLine());
+		System.out.println("사용중인 플랜 : " + user.getRank());
 		System.out.println("납부하셔야 하는 요금 : " + this.calculator.calcCharge() );
 	}
 }

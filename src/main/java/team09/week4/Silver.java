@@ -12,4 +12,8 @@ public class Silver extends Rank {
 	}
 	
 	//public methods
+	@Override
+	public String toString(){
+		return "Silver";
+	}
 }
