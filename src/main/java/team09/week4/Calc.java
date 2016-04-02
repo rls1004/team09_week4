@@ -6,6 +6,8 @@ public class Calc {
 	
 	//constructor
 	public Calc(){
+		//default class
+	
 	}
 	
 	//public methods

@@ -24,7 +24,8 @@ public class User {
 		this.usedRate = usedRate;
 		this.lines = lines;
 		
-		if(this.lines < 1) this.lines = 1;
+		if(this.lines < 1)
+			this.lines = 1;
 
 		if (rank.compareTo("Gold") == 0) {
 			this.rank = new Gold();
