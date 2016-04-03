@@ -12,4 +12,8 @@ public class Gold extends Rank{
 	}
 	
 	//public methods
+	@Override
+	public String toString(){
+		return "Gold";
+	}
 }
