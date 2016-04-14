@@ -1,4 +1,5 @@
-package team09.week4;
+package team.week04;
+
 import java.util.Scanner;
 
 public class Output {
@@ -9,24 +10,22 @@ public class Output {
 
 	//constructor
 	public Output(){
-		this.scanner = new Scanner(System.in);
 		this.calculator = new Calc();
 	}
 	
 	//public methods
-	public void OutputBill()
-	{
-		System.out.print("이번달의 총 사용량을 입력해 주십시오: ");
-		float used = this.scanner.nextFloat();
+	public void outputBill()
+	{		
+		float givenUsed;
+		int givenline;
+		String givenplan;
 		
-		System.out.print("사용중인 회선의 총 수를 입력해 주십시오: ");
-		int line = this.scanner.nextInt();
-		
-		System.out.print("사용중인 플랜을 입력해 주십시오: ");
-		String plan = this.scanner.next();
+		givenUsed = scanner.nextFloat();
+		givenline = scanner.nextInt();
+		givenplan = scanner.next();
 		
 		try{
-			user = new User(used, line, plan);
+			user = new User(givenUsed, givenline, givenplan);
 		}catch(Exception e){
 			System.out.println(e);
 			return;
@@ -37,6 +36,11 @@ public class Output {
 		System.out.println("총 사용량 : " + user.getUsedRate());
 		System.out.println("사용 회선 수 : " + user.getLine());
 		System.out.println("사용중인 플랜 : " + user.getRank());
-		System.out.println("납부하셔야 하는 요금 : " + this.calculator.calcCharge() );
+		System.out.println("납부하셔야 하는 요금 : " + this.calcCharge(user) );
+	}
+	
+	public float calcCharge(User user){
+		this.calculator.setUser(user);
+		return this.calculator.calcCharge();
 	}
 }
