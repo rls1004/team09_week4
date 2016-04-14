@@ -1,4 +1,4 @@
-package team09.week4;
+package team.week04;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -33,6 +33,10 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+    	Calc tcalc = new Calc();
+        Output output = new Output();
+        
+        tcalc.setUser(new User(300, 3, "Silver"));
+        assertEquals(tcalc.calcCharge(), output.calcCharge(new User(300, 3, "Silver")));
     }
 }
